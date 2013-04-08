@@ -1,0 +1,37 @@
+Package: Lambda4
+Type: Package
+Title: Collection of Internal Consistency Reliability Coefficients.
+Version: 3.0
+Date: 2012-04-15
+Author: Tyler Hunt <tyler@psychoanalytix.com>
+Maintainer: Tyler Hunt <tyler@psychoanalytix.com>
+Description: Currently the package includes 5 functions.  Three of which are
+    different methods of calculating Guttman's lambda4 coefficient.  One allows
+    the user to select the item splits. The remaining two are new methods to
+    calculate reliability. Both are based on a combination of Cronbach's alpha
+    and Maximal-type reliability coefficients but use different maximization
+    procedures.  Lastly, lambda3 (Cronbach's alpha) is included for
+    convenience.
+License: GPL-2
+Suggests:
+    mice,
+    GPArotation
+Collate:
+    'angoff.R'
+    'feldt.R'
+    'kristof.R'
+    'lambda1.R'
+    'lambda2.R'
+    'lambda5.R'
+    'lambda6.R'
+    'omega.tot.R'
+    'print.Lambda4.pkg.R'
+    'raju.R'
+    'impute.cov.R'
+    'bin.combs.R'
+    'cov.lambda4.R'
+    'lambda3.R'
+    'lambdas.R'
+    'quant.lambda4.R'
+    'user.lambda4.R'
+Packaged: 2013-02-20 19:51:47 UTC; aredd
