@@ -37,3 +37,4 @@ print.omega.tot<-labelled_output("McDonald's Omega")
 
 #' @S3method print raju
 print.raju<-labelled_output("Raju's Coefficient")
+
