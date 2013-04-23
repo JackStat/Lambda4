@@ -29,7 +29,7 @@ feldt<-function(x, split.method="even.odd", missing="complete", standardize=FALS
 	
  sigma.a<-sigma[which(Split==0), which(Split==0)]
  sigma.b<-sigma[which(Split==1), which(Split==1)]
- sigma.ab<-input.cov(sigma.a, sigma.b, missing)
+ sigma.ab<-impute.cov(sigma.a, sigma.b, use=missing)
 
 feldt<-4*sum(sigma.ab)/(sum(sigma)-((sum(sigma.a)-sum(sigma.b))/sqrt(sum(sigma))^2))
 
