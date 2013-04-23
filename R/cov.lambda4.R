@@ -4,7 +4,7 @@
 #' @param missing How to handle missing values.
 #' @param show.lambda4s If TRUE then the estimates for each split are included in the output.
 #' @param show.splits If TRUE then a binary matrix is exported that describes the ways the items were split.
-#' @param standardize When TRUE Results are standardized by using the correlation matrix instead of the covariance matrix for computation.
+#' @param standardize When TRUE results are standardized by using the correlation matrix instead of the covariance matrix for computation.
 #' @param method Can select either Hunt or Osburn.
 #' 
 #' @author Tyler Hunt \email{tyler@@psychoanalytix.com}
