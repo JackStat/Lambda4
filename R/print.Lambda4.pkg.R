@@ -38,3 +38,37 @@ print.omega.tot<-labelled_output("McDonald's Omega")
 #' @S3method print raju
 print.raju<-labelled_output("Raju's Coefficient")
 
+#' @S3method print cov.lambda4
+print.cov.lambda4<-function(x, ...){
+  if(x$method=="Hunt"){
+    cat("Covariance Maximized Lambda4 \n")
+    cat("Mean ")
+    cat(round(x$lambda4[[1]], getOption('lambda.digits', 3)))
+    cat("\nMax  ")
+    cat(round(x$lambda4[[2]], getOption('lambda.digits', 3)))
+  
+    if(x$show.splits==TRUE){
+      cat("\n \n")
+      cat("Splits \n")
+      cat(x$Splits[,1])
+      cat("\n")
+      cat(x$Splits[,2])
+    }
+  
+    if(x$show.lambda4s==TRUE){
+      cat("\n \n")
+      cat("All Maximized Lambda 4 Estimates \n")
+      cat(x$lambda4s)
+    }
+  }
+    
+  if(x$method=="Osburn"){
+    cat("Osburn's Maximized Lambda4 \n")
+    cat(round(x$l4[[1]], getOption('lambda.digits', 3)))
+    cat("\n \nSplit \n")
+    cat(x$Splits)
+  }
+    
+}
+
+

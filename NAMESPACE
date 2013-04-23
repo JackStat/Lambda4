@@ -1,4 +1,5 @@
 S3method(print,angoff)
+S3method(print,cov.lambda4)
 S3method(print,feldt)
 S3method(print,kristof)
 S3method(print,lambda1)

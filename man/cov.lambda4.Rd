@@ -2,9 +2,9 @@
 \alias{cov.lambda4}
 \title{Compute Covariance Maximized Lambda4}
 \usage{
-  cov.lambda4(x, show.lambda4s = FALSE,
-    show.splits = FALSE, standardize = FALSE,
-    missing = "complete")
+  cov.lambda4(x, standardize = FALSE, missing = "complete",
+    method = "Hunt", show.lambda4s = FALSE,
+    show.splits = FALSE)
 }
 \arguments{
   \item{x}{Can be either a data matrix or a covariance
@@ -21,6 +21,8 @@
   \item{standardize}{When TRUE Results are standardized by
   using the correlation matrix instead of the covariance
   matrix for computation.}
+
+  \item{method}{Can select either Hunt or Osburn.}
 }
 \description{
   Compute Covariance Maximized Lambda4
