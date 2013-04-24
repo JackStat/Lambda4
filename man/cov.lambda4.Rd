@@ -18,7 +18,7 @@
   \item{show.splits}{If TRUE then a binary matrix is
   exported that describes the ways the items were split.}
 
-  \item{standardize}{When TRUE Results are standardized by
+  \item{standardize}{When TRUE results are standardized by
   using the correlation matrix instead of the covariance
   matrix for computation.}
 
