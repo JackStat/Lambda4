@@ -41,7 +41,7 @@ print.raju<-labelled_output("Raju's Coefficient")
 #' @S3method print cov.lambda4
 print.cov.lambda4<-function(x, ...){
   if(x$method=="Hunt"){
-    cat("Covariance Maximized Lambda4 \n")
+    cat("Covariance Maximized Lambda 4 \n")
     cat("Mean ")
     cat(round(x$lambda4[[1]], getOption('lambda.digits', 3)))
     cat("\nMax  ")
@@ -68,7 +68,23 @@ print.cov.lambda4<-function(x, ...){
     cat("\n \nSplit \n")
     cat(x$Splits)
   }
+}
+  
+#' @S3method print quant.lambda4
+print.quant.lambda4<-function(x, ...){
+    cat("Quantile Lambda 4 \n")
+    for(i in 1:length(x$lambda4.quantile)){
+      cat(names(x$lambda4.quantile)[i])
+      cat(" \n")
+      cat(round(x$lambda4.quantile[i], getOption('lambda.digits', 3)))
+      cat("\n\n")
+    }
     
+    if(x$show.lambda4s==TRUE){
+      cat("\n \n")
+      cat("All Optimized Lambda 4 Estimates \n")
+      cat(x$lambda4s)
+    }    
 }
 
 

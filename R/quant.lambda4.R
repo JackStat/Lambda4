@@ -6,7 +6,7 @@
 #'
 #' @param x Can be either a data matrix or a covariance matrix
 #' @param starts How many split-half reliability estimates used
-#' @param quantile The quantile of the generated splits.  It defaults to .5 because it makes the most sense at this time.  (The simulation manuscript is under review).
+#' @param quantiles The quantiles of the generated splits.  It defaults to .5 because it makes the most sense at this time.  (The simulation manuscript is under review).
 #' @param missing How to handle missing values.
 #' @param show.lambda4s If TRUE then Shows the vector of lambda4s if FALSE then the vector is hidden
 #' @param standardize Results are standardized by using the correlation matrix instead of the covariance matrix for computation.
@@ -32,7 +32,7 @@
 #' @export
 
 
-quant.lambda4<-function(x, starts=1000, quantile=.5, missing=TRUE, show.lambda4s=FALSE, standardize=FALSE){
+quant.lambda4<-function(x, starts=1000, quantiles=.5, missing="complete", show.lambda4s=FALSE, standardize=FALSE){
 
   l4.vect<-rep(NA, starts)
 
@@ -92,16 +92,16 @@ quant.lambda4<-function(x, starts=1000, quantile=.5, missing=TRUE, show.lambda4s
 
     l4.vect[y]<-(4*(t1t%*%sigma%*%t2))/(onerow%*%sigma%*%onevector)
   }
-  quants<-quantile(l4.vect, quantile)
+  quants<-quantile(l4.vect, quantiles)
 
   lambda4.quantile=quants
 
-  if (show.lambda4s==FALSE){
-	  result<-list(lambda4.quantile=lambda4.quantile)
-  }
-  if(show.lambda4s==TRUE){
-	  result<-list(lambda4.quantile=lambda4.quantile,lambda4s=l4.vect)
-  }
+  result<-list(lambda4.quantile=lambda4.quantile,
+              lambda4s=l4.vect, 
+              show.lambda4s=show.lambda4s,
+              quantiles=quantiles)
+  
+  class(result)<-c("quant.lambda4")
 
   return(result)
 }

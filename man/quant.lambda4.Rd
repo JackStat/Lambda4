@@ -2,8 +2,8 @@
 \alias{quant.lambda4}
 \title{Compute Quantile Lambda 4}
 \usage{
-  quant.lambda4(x, starts = 1000, quantile = 0.5,
-    missing = TRUE, show.lambda4s = FALSE,
+  quant.lambda4(x, starts = 1000, quantiles = 0.5,
+    missing = "complete", show.lambda4s = FALSE,
     standardize = FALSE)
 }
 \arguments{
@@ -13,8 +13,8 @@
   \item{starts}{How many split-half reliability estimates
   used}
 
-  \item{quantile}{The quantile of the generated splits.  It
-  defaults to .5 because it makes the most sense at this
+  \item{quantiles}{The quantiles of the generated splits.
+  It defaults to .5 because it makes the most sense at this
   time.  (The simulation manuscript is under review).}
 
   \item{missing}{How to handle missing values.}
