@@ -2,9 +2,6 @@
 #' 
 #' @param x Can be either a data frame or a covariance matrix.
 #' @param split.method Specify method for splitting items.
-#' @param bootstrap Can bootstrap for standard errors.
-#' @param B Specify how many bootstraps.
-#' @param show.boots Specify if you want to the bootstraps included in the output.
 #' @param item.stats If TRUE then item statistics are provided in the output.
 #' @param missing How to handle missing values.
 #' 
@@ -15,7 +12,7 @@
 #' @export
 
 
-user.lambda4<-function(x, split.method="even.odd", bootstrap=FALSE, B=1000, show.boots=FALSE, item.stats=FALSE, missing="complete"){
+user.lambda4<-function(x, split.method="even.odd", item.stats=FALSE, missing="complete"){
 
  #number of variables
  nvar<-dim(x)[2] 
@@ -50,29 +47,14 @@ else
  onerow<-rep(1, nvar)
  onerow<-t(onerow)
  onevector<-t(onerow)
- if(bootstrap==TRUE){
- 	temp<-rep(NA, B)
- 	for(i in 1:B){
- 		samp<-round(sample(1:n, replace=TRUE))
- 		sigma<-cov(x[samp,], use="pairwise")
- 		temp[i]<-(4*(t1t.split%*%sigma%*%t2.split))/(onerow%*%sigma)%*%onevector
- 		
- 	}
- 	lci<-quantile(temp,.45)
- 	uci<-quantile(temp,.55)
- 	lambda4<-mean(temp)
- 	lambda4<-data.frame(lci,lambda4,uci, row.names=NULL)
- 	Boots<-temp
- }
- else {lambda4<-(4*(t1t.split%*%sigma%*%t2.split))/sum(sigma)
- 	lambda4<-data.frame(lambda4)}
+
+ lambda4<-(4*(t1t.split%*%sigma%*%t2.split))/sum(sigma)
+ lambda4<-data.frame(lambda4)
  	
  if(item.stats==FALSE)
  	Item.Statistics=NULL
- if(show.boots==FALSE)
- 	Boots=NULL
  
- result<-list(lambda4=lambda4, Item.Statistics=Item.Statistics, Boots=Boots)
+ result<-list(lambda4=lambda4, Item.Statistics=Item.Statistics)
  
  class(result)=c("Lambda4", "print.user.lambda4")
  return(result)

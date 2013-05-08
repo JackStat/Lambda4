@@ -3,7 +3,6 @@
 \title{Compute User Specified Lambda 4 (Split-Half)}
 \usage{
   user.lambda4(x, split.method = "even.odd",
-    bootstrap = FALSE, B = 1000, show.boots = FALSE,
     item.stats = FALSE, missing = "complete")
 }
 \arguments{
@@ -11,13 +10,6 @@
   matrix.}
 
   \item{split.method}{Specify method for splitting items.}
-
-  \item{bootstrap}{Can bootstrap for standard errors.}
-
-  \item{B}{Specify how many bootstraps.}
-
-  \item{show.boots}{Specify if you want to the bootstraps
-  included in the output.}
 
   \item{item.stats}{If TRUE then item statistics are
   provided in the output.}
