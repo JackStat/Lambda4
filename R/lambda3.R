@@ -27,8 +27,8 @@ lambda3<-function(x, item.stats.max=12, missing="complete"){
   sigma.cor<-cov2cor(sigma)
  
   Obs<-colSums(!is.na(x))
-  Mean<-round(colMeans(x, na.rm=TRUE),digits=2)
-  SD<-round(sapply(x, sd, na.rm=TRUE), digits=2)
+  Mean<-colMeans(x, na.rm=TRUE)
+  SD<-sapply(x, sd, na.rm=TRUE)
  
   onerow<-rep(1,p)
   onerow<-t(onerow)
@@ -37,7 +37,7 @@ lambda3<-function(x, item.stats.max=12, missing="complete"){
   Unstandardized<-(p/(p-1))*(1-(onerow%*%diag(sigma)/(onerow%*%sigma%*%onevector)))
   Standardized<-(p/(p-1))*(1-(onerow%*%diag(sigma.cor)/(onerow%*%sigma.cor%*%onevector)))
   Items<-p
-  lambda3<-data.frame(Unstandardized, Standardized, Items)
+  lambda3<-data.frame(Unstandardized, Standardized)
  
   If.Dropped<-rep(NA,p)
   for(i in 1:p){
@@ -47,11 +47,17 @@ lambda3<-function(x, item.stats.max=12, missing="complete"){
  	  sigma.d<-sigma[-i,-i]
  	  If.Dropped[i]<-(p/(p-1))*(1-(onerow.d%*%diag(sigma.d)/(onerow.d%*%sigma.d%*%onevector.d)))
   }
+  
+  
+  
   if(Items <= item.stats.max) {
+    
     Item.Statistics<-data.frame(Mean,SD,Obs,If.Dropped, row.names=(colnames(x))) 
-    result<-list(lambda3=lambda3, Item.Statistics=Item.Statistics) }
+    
+    result<-list(lambda3=lambda3, Item.Statistics=Item.Statistics, Items=Items, item.stats.max=item.stats.max) }
  
   else {result<-list(lambda3=lambda3)}
  
+  class(result) <- c("lambda3")
   return(result)
 }

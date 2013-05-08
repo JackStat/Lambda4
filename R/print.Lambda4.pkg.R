@@ -26,6 +26,24 @@ print.lambda1<-labelled_output("Guttman's Lambda 1 Coefficient")
 #' @S3method print lambda2
 print.lambda2<-labelled_output("Guttman's Lambda 2 Coefficient")
 
+#' @S3method print lambda3
+print.lambda3<-function(x, ...){
+  cat("Coefficient Alpha (Guttman's Lambda 3 Coefficient) \n\n")
+  
+  cat("Unstandardized \n")
+  cat(round(x$lambda3[[1]], getOption('lambda.digits', 3)))
+  cat("\n\n")
+  cat("Standardized \n")
+  cat(round(x$lambda3[[2]], getOption('lambda.digits', 3)))
+  cat("\n\n")
+  
+  if(x$Items <= x$item.stats.max){
+    cat("Item Statistics \n")
+    print(round(x$Item.Statistics, getOption('lambda.digits', 3)))
+  }
+  
+}
+
 #' @S3method print lambda5
 print.lambda5<-labelled_output("Guttman's Lambda 5 Coefficient")
 

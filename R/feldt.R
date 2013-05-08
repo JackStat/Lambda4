@@ -27,9 +27,11 @@ feldt<-function(x, split.method="even.odd", missing="complete", standardize=FALS
  	warning("The length of split is not the same as the number of items")
  Split<-t1t.split
 	
- sigma.a<-sigma[which(Split==0), which(Split==0)]
- sigma.b<-sigma[which(Split==1), which(Split==1)]
- sigma.ab<-impute.cov(sigma.a, sigma.b, use=missing)
+ t1t.split <- (t1t.split-.5)*2
+ 
+ sigma.a <- cov(sigma[, which(Split==0)])
+ sigma.b<- cov(sigma[, which(Split==1)])
+ sigma.ab<-cov(sigma.a, sigma.b)
 
 feldt<-4*sum(sigma.ab)/(sum(sigma)-((sum(sigma.a)-sum(sigma.b))/sqrt(sum(sigma))^2))
 
