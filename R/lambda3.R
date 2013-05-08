@@ -47,15 +47,15 @@ lambda3<-function(x, item.stats.max=12, missing="complete"){
  	  If.Dropped[i]<-(p/(p-1))*(1-(onerow.d%*%diag(sigma.d)/(onerow.d%*%sigma.d%*%onevector.d)))
   }
   
-  
-  
-  if(Items <= item.stats.max) {
+  if(n != p) {
+    Item.Statistics<-data.frame(Mean,SD,Obs,If.Dropped, row.names=(colnames(x)))
+  }
+  else{
+    Item.Statistics=data.frame(If.Dropped, row.names=(colnames(x)))
+  }
     
-    Item.Statistics<-data.frame(Mean,SD,Obs,If.Dropped, row.names=(colnames(x))) 
-    
-    result<-list(lambda3=lambda3, Item.Statistics=Item.Statistics, Items=Items, item.stats.max=item.stats.max) }
- 
-  else {result<-list(lambda3=lambda3)}
+  result<-list(lambda3=lambda3, Item.Statistics=Item.Statistics, Items=Items, item.stats.max=item.stats.max) 
+
  
   class(result) <- c("lambda3")
   return(result)
