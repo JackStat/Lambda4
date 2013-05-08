@@ -13,7 +13,8 @@ LazyData: true
 License: GPL-2
 Suggests:
     mice,
-    GPArotation
+    GPArotation,
+    testthat
 Collate:
     'angoff.R'
     'feldt.R'
