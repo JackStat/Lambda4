@@ -24,7 +24,6 @@
 #' \item{l4.vect}{A vector of lambda4 (split-half reliability) calculations}
 #'
 #' @examples
-#' data(Guttman)
 #' quant.lambda4(Guttman, starts=1000, quantile=c(.05,.5,.95))
 #'
 #' @author Tyler Hunt \email{tyler@@psychoanalytix.com}

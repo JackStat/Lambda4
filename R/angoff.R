@@ -6,6 +6,9 @@
 #' @param standardize When TRUE Results are standardized by using the correlation matrix instead of the covariance matrix for computation.
 #'
 #' @author Tyler Hunt \email{tyler@@psychoanalytix.com}
+#' 
+#' @examples 
+#' angoff(Rosenberg, split.method="even.odd", missing="complete", standardize=FALSE)
 #' @export
 angoff<-function(x, split.method="even.odd", missing="complete", standardize=FALSE){
 

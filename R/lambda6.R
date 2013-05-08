@@ -7,8 +7,9 @@
 #' @references
 #' Guttman L (1945). "A Basis for Analyzing Test-Retest Reliability." Psychometrika, 10, 255-282.
 #' @author Tyler Hunt \email{tyler@@psychoanalytix.com}
+#' lambda6(Rosenberg)
 #' @export
-lambda6<-function(x, missing="pairwise", standardize=FALSE){
+lambda6<-function(x, missing="complete", standardize=FALSE){
   
   n <- dim(x)[1]
   p <- dim(x)[2]

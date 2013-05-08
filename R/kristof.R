@@ -6,6 +6,8 @@
 #' @param standardize When TRUE Results are standardized by using the correlation matrix instead of the covariance matrix for computation.
 #'
 #' @author Tyler Hunt \email{tyler@@psychoanalytix.com}
+#' @examples
+#' kristof(Rosenberg, split.method="triplet")
 #' @export
 kristof<-function(x, split.method="triplet", missing="complete", standardize=FALSE){
 

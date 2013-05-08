@@ -8,9 +8,13 @@
 #' @param method Can select either Hunt or Osburn.
 #' 
 #' @author Tyler Hunt \email{tyler@@psychoanalytix.com}
+#' 
+#' @examples
+#' cov.lambda4(Rosenberg, method="Hunt")
+#' cov.lambda4(Rosenberg, method="Osburn")
 #' @export
 
-cov.lambda4<-function (x, standardize=FALSE, missing = "complete", method="Hunt", show.lambda4s = FALSE, show.splits = FALSE) 
+cov.lambda4<-function (x, method="Hunt", missing = "complete", show.lambda4s = FALSE, show.splits = FALSE, standardize=FALSE) 
 {
     nvar <- dim(x)[2]
     n <- dim(x)[1]

@@ -20,6 +20,9 @@
 \description{
   Compute Angoff Coefficient
 }
+\examples{
+angoff(Rosenberg, split.method="even.odd", missing="complete", standardize=FALSE)
+}
 \author{
   Tyler Hunt \email{tyler@psychoanalytix.com}
 }

@@ -7,10 +7,12 @@
 #' @references
 #' Guttman L (1945). "A Basis for Analyzing Test-Retest Reliability." Psychometrika, 10, 255-282.
 #' @author Tyler Hunt \email{tyler@@psychoanalytix.com}
+#' @examples
+#' lambdas(Rosenberg)
 #'
 #' @export
 
-lambdas <- function(x, missing="pairwise", standardize=FALSE){
+lambdas <- function(x, missing="complete", standardize=FALSE){
 	
 	sigma <- impute.cov(x, missing)
 	

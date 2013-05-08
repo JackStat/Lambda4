@@ -12,7 +12,6 @@
 #'
 #' @author Tyler Hunt \email{tyler@@psychoanalytix.com}
 #' @examples 
-#' data(Rosenberg)
 #' lambda3(Rosenberg)
 #' @export
 

@@ -8,6 +8,9 @@
 #' \item{omega.tot}{Omega total reliability estimate.}
 #' 
 #' @author Tyler Hunt \email{tyler@@psychoanalytix.com}
+#' @examples
+#' omega.tot(Rosenberg, factors=1)
+#' 
 #' @export
 omega.tot<-function(x, factors=1, missing="complete"){
 

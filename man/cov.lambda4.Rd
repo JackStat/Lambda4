@@ -2,9 +2,9 @@
 \alias{cov.lambda4}
 \title{Compute Covariance Maximized Lambda4}
 \usage{
-  cov.lambda4(x, standardize = FALSE, missing = "complete",
-    method = "Hunt", show.lambda4s = FALSE,
-    show.splits = FALSE)
+  cov.lambda4(x, method = "Hunt", missing = "complete",
+    show.lambda4s = FALSE, show.splits = FALSE,
+    standardize = FALSE)
 }
 \arguments{
   \item{x}{Can be either a data matrix or a covariance
@@ -26,6 +26,10 @@
 }
 \description{
   Compute Covariance Maximized Lambda4
+}
+\examples{
+cov.lambda4(Rosenberg, method="Hunt")
+cov.lambda4(Rosenberg, method="Osburn")
 }
 \author{
   Tyler Hunt \email{tyler@psychoanalytix.com}
