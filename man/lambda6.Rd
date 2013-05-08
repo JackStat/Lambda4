@@ -2,7 +2,7 @@
 \alias{lambda6}
 \title{Compute Guttman's Lambda 6 Coefficient}
 \usage{
-  lambda6(x, missing = "pairwise", standardize = FALSE)
+  lambda6(x, missing = "complete", standardize = FALSE)
 }
 \arguments{
   \item{x}{Can be either a data matrix or a covariance
@@ -19,6 +19,7 @@
 }
 \author{
   Tyler Hunt \email{tyler@psychoanalytix.com}
+  lambda6(Rosenberg)
 }
 \references{
   Guttman L (1945). "A Basis for Analyzing Test-Retest

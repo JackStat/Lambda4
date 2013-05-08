@@ -20,6 +20,9 @@
 \description{
   Compute Raju Coefficient
 }
+\examples{
+raju(Rosenberg, split.method="even.odd")
+}
 \author{
   Tyler Hunt \email{tyler@psychoanalytix.com}
 }

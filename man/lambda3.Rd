@@ -19,7 +19,6 @@
   split in parallel forms.
 }
 \examples{
-data(Rosenberg)
 lambda3(Rosenberg)
 }
 \author{

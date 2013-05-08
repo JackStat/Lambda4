@@ -20,6 +20,9 @@
 \description{
   Compute Kristof Coefficient
 }
+\examples{
+kristof(Rosenberg, split.method="triplet")
+}
 \author{
   Tyler Hunt \email{tyler@psychoanalytix.com}
 }

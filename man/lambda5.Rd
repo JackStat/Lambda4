@@ -17,6 +17,9 @@
 \description{
   Compute Guttman's Lambda 5 Coefficient
 }
+\examples{
+lambda5(Rosenberg)
+}
 \author{
   Tyler Hunt \email{tyler@psychoanalytix.com}
 }

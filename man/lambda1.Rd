@@ -17,6 +17,9 @@
 \description{
   Compute Guttman's Lambda 1 Coefficient
 }
+\examples{
+lambda1(Rosenberg)
+}
 \author{
   Tyler Hunt \email{tyler@psychoanalytix.com}
 }

@@ -19,6 +19,10 @@
 \description{
   Compute User Specified Lambda 4 (Split-Half)
 }
+\examples{
+user.lambda4(Rosenberg)
+user.lambda4(Rosenberg, c(0, 1, 1, 0, 1, 1, 0, 1, 0, 0))
+}
 \author{
   Tyler Hunt \email{tyler@psychoanalytix.com}
 }

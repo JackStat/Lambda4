@@ -18,6 +18,9 @@
 \description{
   Compute McDonald's Omega Total
 }
+\examples{
+omega.tot(Rosenberg, factors=1)
+}
 \author{
   Tyler Hunt \email{tyler@psychoanalytix.com}
 }
