@@ -84,10 +84,10 @@ print.cov.lambda4<-function(x, ...){
   
     if(x$show.splits==TRUE){
       cat("\n \n")
-      cat("Splits \n")
-      cat(x$Splits[,1])
-      cat("\n")
+      cat("Median split \n")
       cat(x$Splits[,2])
+      cat("\nMaximum split \n")
+      cat(x$Splits[,3])
     }
   
     if(x$show.lambda4s==TRUE){

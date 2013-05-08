@@ -83,16 +83,17 @@ cov.lambda4<-function (x, method="Hunt", missing = "complete", show.lambda4s = F
         l4.vect[i] <- (4 * (t1t.matrix[i, ] %*% sigma %*% t2.matrix[,i]))/(onerow %*% sigma) %*% onevector
       }
       
+      Max <- max(l4.vect)
+      Mean <- mean(l4.vect)
+      Median <- median(l4.vect)
+      Minimum <- min(l4.vect)
+      
       sl4 <- sort(l4.vect)
       Min.Split <- t1t.matrix[which(l4.vect == sl4[1]), ]
       Median.Split <- t1t.matrix[which(l4.vect == sl4[round(lencombs/2)]), ]
       Max.Split <- t1t.matrix[which(l4.vect == sl4[lencombs]), ]
       Splits <- data.frame(Min.Split, Median.Split, Max.Split)
       
-      Max <- max(l4.vect)
-      Mean <- mean(l4.vect)
-      Median <- median(l4.vect)
-      Minimum <- min(l4.vect)
       count <- lencombs
       lambda4 <- data.frame(Mean, Max, Median, Minimum)
       
