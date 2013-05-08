@@ -12,6 +12,7 @@ Description: Currently the package includes 5 functions.  Three of which are
     and Maximal-type reliability coefficients but use different maximization
     procedures.  Lastly, lambda3 (Cronbach's alpha) is included for
     convenience.
+LazyData: true
 License: GPL-2
 Suggests:
     mice,
