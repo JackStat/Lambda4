@@ -36,15 +36,21 @@ user.lambda4<-function(x, split.method="even.odd", item.stats=FALSE, missing="co
  Split<-t1t.split
  Obs<-colSums(!is.na(x))
  
- if(item.stats==TRUE){
- if (dim(x)[1] != p)
- 	{
- 	Mean<-round(colMeans(x, na.rm=TRUE),digits=2)
- 	SD<-round(sapply(x,sd, na.rm=TRUE), digits=2)
- 	Item.Statistics<-data.frame(Split,Mean,SD,Obs, row.names=(colnames(x)))
-	 }
-else
-	{Item.Statistics<-data.frame(Split, Obs)}}
+
+  if(n != p & item.stats == TRUE){
+ 	  Mean<-round(colMeans(x, na.rm=TRUE),digits=2)
+ 	  SD<-round(sapply(x,sd, na.rm=TRUE), digits=2)
+ 	  Item.Statistics<-data.frame(Mean,SD,Obs, row.names=(colnames(x)))
+	  }
+  else{
+   Item.Statistics<-NULL
+    }
+  if(n == p & item.stats == TRUE){
+    warning("Item statistics cannot be provided from a covariance matrix", call.=FALSE)
+    Item.Statistics=NULL
+    }
+
+
  t1t.split<-t(t1t.split)
  t2.split<-(t(t1t.split)-1)*-1
  
@@ -53,14 +59,11 @@ else
  onevector<-t(onerow)
 
  lambda4<-(4*(t1t.split%*%sigma%*%t2.split))/sum(sigma)
- lambda4<-data.frame(lambda4)
- 	
- if(item.stats==FALSE)
- 	Item.Statistics=NULL
  
- result<-list(lambda4=lambda4, Item.Statistics=Item.Statistics)
  
- class(result)=c("Lambda4", "print.user.lambda4")
+ result<-list(lambda4=lambda4, Item.Statistics=Item.Statistics, Split=Split)
+ 
+ class(result)=c("user.lambda4")
  return(result)
  }
 

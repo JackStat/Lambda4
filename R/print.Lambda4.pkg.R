@@ -44,6 +44,23 @@ print.lambda3<-function(x, ...){
   
 }
 
+#' @S3method print user.lambda4
+print.user.lambda4<-function(x, ...){
+  
+  cat("User Specified Lambda 4 \n")
+  cat(round(x$lambda4, getOption('lambda.digits', 3)))
+  
+  cat("\n\nSplit \n")
+  cat(x$Split)
+  cat("\n")
+  
+  if(!is.null(x$Item.Statistics)){
+  cat("\nItem Statistics\n")
+  print(round(x$Item.Statistics, getOption('lambda.digits', 3))) 
+  }
+  
+}
+
 #' @S3method print lambda5
 print.lambda5<-labelled_output("Guttman's Lambda 5 Coefficient")
 
