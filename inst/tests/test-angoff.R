@@ -1,6 +1,10 @@
-test_that('angoff provides correct estimate for Rosenberg',{
+test_that('angoff and population covariance matrices',{
   
-  angoff.val<-as.numeric(round(angoff(Rosenberg)[[1]],6))
+  angoff.val1<-as.numeric(round(angoff(oneFcong)[[1]],6))
+  expect_that(angoff.val1, equals(.855697))
   
-  expect_that(angoff.val, equals(.895033))
+  angoff.val2<-as.numeric(round(angoff(oneFpar)[[1]],6))
+  expect_that(angoff.val2, equals(.888889))
+  
+  
 })
