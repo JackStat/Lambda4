@@ -99,10 +99,10 @@ cov.lambda4<-function (x, method="Hunt", missing = "complete", show.lambda4s = F
       
       Analysis.Details <- data.frame(nvar, count)
       
-      result <- list(method = method,
-                     lambda4 = lambda4, 
-                     Analysis.Details = Analysis.Details, 
+      result <- list(lambda4 = lambda4, 
                      lambda4s = l4.vect, 
+                     method = method,
+                     Analysis.Details = Analysis.Details, 
                      Splits = Splits, 
                      show.splits=show.splits, 
                      show.lambda4s=show.lambda4s)
@@ -119,10 +119,10 @@ cov.lambda4<-function (x, method="Hunt", missing = "complete", show.lambda4s = F
       l4 <- (4 *(t1t %*% sigma %*% t2) )/(onerow %*% sigma) %*% onevector
       Splits=t1t
       Analysis.Details <- data.frame(nvar, 1)
-      result <- list(method = method,
+      result <- list(l4 = l4, 
                      Analysis.Details = Analysis.Details, 
-                     l4 = l4, 
                      Splits = Splits, 
+                     method = method,
                      show.splits = TRUE)
     }
 
