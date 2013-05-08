@@ -15,6 +15,7 @@ Suggests:
     mice,
     GPArotation,
     testthat
+BugReports: https://github.com/JackStat/Lambda4/issues
 Collate:
     'angoff.R'
     'feldt.R'
