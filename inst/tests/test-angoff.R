@@ -1,3 +1,4 @@
+context("Angoff")
 test_that('angoff and population covariance matrices',{
   
   angoff.val1<-as.numeric(round(angoff(oneFcong)[[1]],6))
