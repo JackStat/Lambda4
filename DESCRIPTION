@@ -18,7 +18,6 @@ Suggests:
 BugReports: https://github.com/JackStat/Lambda4/issues
 Collate:
     'angoff.R'
-    'feldt.R'
     'kristof.R'
     'lambda1.R'
     'lambda2.R'
