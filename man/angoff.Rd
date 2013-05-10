@@ -26,4 +26,9 @@ angoff(Rosenberg, split.method="even.odd", missing="complete", standardize=FALSE
 \author{
   Tyler Hunt \email{tyler@psychoanalytix.com}
 }
+\references{
+  Feldt, L. S., & Charter, R. A. (2003). Estimating the
+  reliability of a test split into two parts of equal or
+  unequal length. Psychological Methods, 8(1), 102-109.
+}
 
