@@ -27,13 +27,14 @@ feldt<-function(x, split.method="even.odd", missing="complete", standardize=FALS
  	warning("The length of split is not the same as the number of items")
  Split<-t1t.split
 	
- t1t.split <- (t1t.split-.5)*2
+ t1t.split<-t(t1t.split)
+ t2.split<-(t(t1t.split)-1)*-1
  
- sigma.a <- cov(sigma[, which(Split==0)])
- sigma.b<- cov(sigma[, which(Split==1)])
- sigma.ab<-cov(sigma.a, sigma.b)
+ sigma.a <- sigma[which(Split==0), which(Split==0)]
+ sigma.b <- sigma[which(Split==1), which(Split==1)]
 
-feldt<-4*sum(sigma.ab)/(sum(sigma)-((sum(sigma.a)-sum(sigma.b))/sqrt(sum(sigma))^2))
+feldt <- (4*(t1t.split%*%sigma%*%t2.split))/
+   (sum(sigma) - ( (sum(sigma.a)-sum(sigma.b)) / sqrt(sum(sigma)) )^2 )
 
 result<-list(feldt=feldt)
 class(result)<-c("feldt")
