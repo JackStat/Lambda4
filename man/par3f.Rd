@@ -30,7 +30,7 @@ err<-diag(c(  .6^2,.6^2,.6^2,.6^2,
 				.6^2,.6^2,.6^2,.6^2,
 				.6^2,.6^2,.6^2,.6^2))
 		
-###---5x5 matrix of factor covariances
+###---3x3 matrix of factor covariances
 phi<-matrix(c(rep(.3, 9)), nrow=3)
 diag(phi)<-1
 
