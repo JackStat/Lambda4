@@ -6,6 +6,8 @@
 #' @param standardize When TRUE Results are standardized by using the correlation matrix instead of the covariance matrix for computation.
 #'
 #' @author Tyler Hunt \email{tyler@@psychoanalytix.com}
+#' @references
+#' Kristof, W. (1974). Estimation of reliability and true score variance from a split of a test into three arbitrary parts. Psychometrika, 39(4), 491-499.
 #' @examples
 #' kristof(Rosenberg, split.method="triplet")
 #' @export

@@ -8,6 +8,8 @@
 #' \item{omega.tot}{Omega total reliability estimate.}
 #' 
 #' @author Tyler Hunt \email{tyler@@psychoanalytix.com}
+#' @references
+#' McDonald, R. P. (1999). Test Theory: Aunified Treatment. Psychology Press.
 #' @examples
 #' omega.tot(Rosenberg, factors=1)
 #' 
