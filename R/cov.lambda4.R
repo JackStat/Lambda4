@@ -90,14 +90,17 @@ cov.lambda4<-function (x, method="Hunt", missing = "complete", show.lambda4s = F
       
       sl4 <- sort(l4.vect)
       Min.Split <- t1t.matrix[which(l4.vect == sl4[1]), ]
+      if(!is.null(nrow(Min.Split)))
+        {Min.Split=Min.Split[1,]}
+        {Min.Split=Min.Split}
       
       Median.Split <- t1t.matrix[which(l4.vect == sl4[round(lencombs/2)]), ]
-      if(nrow(Median.Split)>1)
+      if(!is.null(nrow(Median.Split)))
         {Median.Split=Median.Split[1,]}
         {Median.Split=Median.Split}
       
       Max.Split <- t1t.matrix[which(l4.vect == sl4[lencombs]), ]
-      if(nrow(Max.Split)>1)
+      if(!is.null(nrow(Max.Split)))
         {Max.Split=Max.Split[1,]}
         {Max.Split=Max.Split}
       
