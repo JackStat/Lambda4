@@ -64,6 +64,18 @@ quant.lambda4(Guttman, starts=1000, quantile=c(.05,.5,.95))
   Callender J, Osburn H (1979). "An Empirical Comparison of
   Coefficient Alpha, Guttman's Lambda2 and Msplit Maximized
   Split-Half Reliability Estimates." Journal of Educational
+  Measurement, 16, 89-99. Guttman L (1945). "A Basis for
+  Analyzing Test-Retest Reliability." Psychometrika, 10,
+  255-282.
+
+  Callender J, Osburn H (1977). "A Method for Maximizing
+  and Cross-Validating Split-Half Reliability
+  Coefficients." Educational and Psychological Measurement,
+  37, 819-826.
+
+  Callender J, Osburn H (1979). "An Empirical Comparison of
+  Coefficient Alpha, Guttman's Lambda2 and Msplit Maximized
+  Split-Half Reliability Estimates." Journal of Educational
   Measurement, 16, 89-99.
 
   Sijtsma K (2009). "On the Use, Misuse, and Very Limited

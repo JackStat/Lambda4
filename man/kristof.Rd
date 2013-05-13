@@ -26,4 +26,9 @@ kristof(Rosenberg, split.method="triplet")
 \author{
   Tyler Hunt \email{tyler@psychoanalytix.com}
 }
+\references{
+  Kristof, W. (1974). Estimation of reliability and true
+  score variance from a split of a test into three
+  arbitrary parts. Psychometrika, 39(4), 491-499.
+}
 

@@ -24,4 +24,8 @@ omega.tot(Rosenberg, factors=1)
 \author{
   Tyler Hunt \email{tyler@psychoanalytix.com}
 }
+\references{
+  McDonald, R. P. (1999). Test Theory: Aunified Treatment.
+  Psychology Press.
+}
 
