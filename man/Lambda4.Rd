@@ -9,22 +9,21 @@
 }
 \section{Functions}{
 \itemize{
-  \item{angoff}{Compute Angoff Coefficient}
-  \item{bin.combs}{Generate Unique Binary Combinations}
-  \item{cov.lambda4}{Compute Covariance Maximized Lambda4}
-  \item{feldt}{Compute Feldt Coefficient}
-  \item{impute.cov}{Compute Covariance Matrix}
-  \item{kristof}{Compute Kristof Coefficient}
-  \item{lambda1}{Compute Guttman's Lambda 1 Coefficient}
-  \item{lambda2}{Compute Guttman's Lambda 2 Coefficient}
-  \item{lambda3}{Compute Guttman's Lambda 3 Coefficient (Coefficent Alpha)}
-  \item{lambda5}{Compute Guttman's Lambda 5 Coefficient}
-  \item{lambda6}{Compute Guttman's Lambda 6 Coefficient}
-  \item{lambdas}{Compute Guttman's Lambda Coefficients}
-  \item{omega.tot}{Compute McDonald's Omega Total}
-  \item{quant.lambda4}{Compute Quantile Lambda 4}
-  \item{raju}{Compute Raju's Coefficient}
-  \item{user.lambda4}{Compute User Specified Lambda 4 (Split-Half)}
+  \item \code{angoff}: Compute Angoff Coefficient
+  \item \code{bin.combs}: Generate Unique Binary Combinations
+  \item \code{cov.lambda4}: Compute Covariance Maximized Lambda4
+  \item \code{impute.cov}: Compute Covariance Matrix
+  \item \code{kristof}: Compute Kristof Coefficient
+  \item \code{lambda1}: Compute Guttman's Lambda 1 Coefficient
+  \item \code{lambda2}: Compute Guttman's Lambda 2 Coefficient
+  \item \code{lambda3}: Compute Guttman's Lambda 3 Coefficient (Coefficent Alpha)
+  \item \code{lambda5}: Compute Guttman's Lambda 5 Coefficient
+  \item \code{lambda6}: Compute Guttman's Lambda 6 Coefficient
+  \item \code{lambdas}: Compute Guttman's Lambda Coefficients
+  \item \code{omega.tot}: Compute McDonald's Omega Total
+  \item \code{quant.lambda4}: Compute Quantile Lambda 4
+  \item \code{raju}: Compute Raju's Coefficient
+  \item \code{user.lambda4}: Compute User Specified Lambda 4 (Split-Half)
   }
 }
 \author{
