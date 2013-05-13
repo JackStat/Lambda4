@@ -46,6 +46,7 @@ diag(phi)<-1
 ###---Reliability Calculation---###
 t1<-matrix(c(rep(1,20)), nrow=1)
 t1t<-matrix(c(rep(1,20)), ncol=1)
-(fx%*%phi%*%t(fx)+err)
+
+(fx\%*\%phi\%*\%t(fx)+err)
 }
 \keyword{datasets}
