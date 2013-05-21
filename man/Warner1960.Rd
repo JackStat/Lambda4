@@ -1,5 +1,5 @@
-\name{Warner}
-\alias{Warner}
+\name{Warner1960}
+\alias{Warner1960}
 \docType{data}
 \title{
 Warner 1960 Social Class Data
@@ -18,6 +18,6 @@ Bentler, PM (1972). "A Lower-Bound Method for the Dimension-Free Measurement of 
 Warner WL, Meeker M, and Eels K. (1960), "Social Class in America" Harper and Row:New York. 
 }
 \examples{
-data(Warner)
+data(Warner1960)
 }
 \keyword{datasets}
