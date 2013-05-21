@@ -11,7 +11,7 @@ impute.cov <- function(x, missing = c('complete', 'pairwise', 'mi'))
 {
   p <- ncol(x)
   if (nrow(x) == p)
-    x
+    x <- as.matrix(x)
   else{
     missing <- match.arg(missing)
     switch(missing
