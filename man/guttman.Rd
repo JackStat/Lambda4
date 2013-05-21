@@ -1,8 +1,8 @@
-\name{lambdas}
-\alias{lambdas}
+\name{guttman}
+\alias{guttman}
 \title{Guttman's 6 Lambda Coefficients}
 \usage{
-  lambdas(x, missing = "complete", standardize = FALSE)
+  guttman(x, missing = "complete", standardize = FALSE)
 }
 \arguments{
   \item{x}{Can be either a data matrix or a covariance
@@ -18,7 +18,7 @@
   Guttman's 6 Lambda Coefficients
 }
 \examples{
-lambdas(Rosenberg)
+guttman(Rosenberg)
 }
 \author{
   Tyler Hunt \email{tyler@psychoanalytix.com}
