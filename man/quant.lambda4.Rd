@@ -47,7 +47,7 @@
   it defaults to .5.
 }
 \examples{
-quant.lambda4(Guttman, starts=1000, quantile=c(.05,.5,.95))
+quant.lambda4(Rosenberg, starts=1000, quantile=c(.05,.5,.95))
 }
 \author{
   Tyler Hunt \email{tyler@psychoanalytix.com}
