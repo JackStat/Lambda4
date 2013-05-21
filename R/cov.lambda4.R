@@ -26,7 +26,7 @@ cov.lambda4<-function (x, method="Hunt", missing = "complete", show.lambda4s = F
       sigma <- cov2cor(sigma)
     }
     
-    sigma.split <- as.data.frame(sigma)
+    sigma.split <- data.frame(sigma)
     sigma.split <- sigma
     sigma.split[upper.tri(sigma.split, diag = TRUE)] <- -999999
     sigma0 <- diag(sigma) - sigma 
