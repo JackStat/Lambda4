@@ -67,6 +67,24 @@ print.lambda5<-labelled_output("Guttman's Lambda 5 Coefficient")
 #' @S3method print lambda6
 print.lambda6<-labelled_output("Guttman's Lambda 6 Coefficient")
 
+#' @S3method print guttman
+print.guttman<-function(x, ...){
+  cat("Guttman's Lambda Coefficients\n\n")
+  
+  cat("Lambda1      ")
+  cat(round(x$Lambda1, getOption('lambda.digits', 3)))
+  cat("\nLambda2      ")
+  cat(round(x$Lambda2, getOption('lambda.digits', 3)))
+  cat("\nLambda3      ")
+  cat(round(x$Lambda3, getOption('lambda.digits', 3)))
+  cat("\nLambda4(max)\t")
+  cat(round(x$Lambda4, getOption('lambda.digits', 3)))
+  cat("\nLambda5      ")
+  cat(round(x$Lambda5, getOption('lambda.digits', 3)))
+  cat("\nLambda6      ")
+  cat(round(x$Lambda6, getOption('lambda.digits', 3)))
+}
+
 #' @S3method print omega.tot
 print.omega.tot<-labelled_output("McDonald's Omega")
 
