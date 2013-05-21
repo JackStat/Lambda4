@@ -8,11 +8,11 @@
 #' Guttman L (1945). "A Basis for Analyzing Test-Retest Reliability." Psychometrika, 10, 255-282.
 #' @author Tyler Hunt \email{tyler@@psychoanalytix.com}
 #' @examples
-#' lambdas(Rosenberg)
+#' guttman(Rosenberg)
 #'
 #' @export
 
-lambdas <- function(x, missing="complete", standardize=FALSE){
+guttman <- function(x, missing="complete", standardize=FALSE){
 	
 	sigma <- impute.cov(x, missing)
 	
@@ -30,7 +30,7 @@ lambdas <- function(x, missing="complete", standardize=FALSE){
 
   result <- list(Lambda1=Lambda1, Lambda2=Lambda2, Lambda3=Lambda3, Lambda4=Lambda4, Lambda5=Lambda5, Lambda6=Lambda6)
   
-  class(result) <- c("lambdas", "print.lambdas")
+  class(result) <- c("guttman")
   return(result)
 }
 
