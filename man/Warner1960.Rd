@@ -5,7 +5,7 @@
 Warner 1960 Social Class Data
 }
 \description{Data comes from Warner, Meeker, and Eels (1960) and is a multidimensional scale of composite scores of social class.}
-\usage{data(Warner)}
+\usage{data(Warner1960)}
 \format{
   The format is:
  num [1:6, 1:6] 1 0.87 0.76 0.71 0.7 0.77 0.87 1 0.82 0.81 ...
