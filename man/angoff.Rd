@@ -17,8 +17,19 @@
   using the correlation matrix instead of the covariance
   matrix for computation.}
 }
+\value{
+  angoff The estimate of reliability.
+
+  Split The split half key used to calculate angoff's
+  coefficient.
+}
 \description{
-  Compute Angoff Coefficient
+  Angoff's coefficient is most appropriately used for
+  estimating reliability in tests that can be split into
+  two parts with unequal lengths.  The calculation corrects
+  for the inequality of length in the splits.  Angoff's
+  coefficient is also believed to handle congeneric test
+  structures relatively well.
 }
 \examples{
 angoff(Rosenberg, split.method="even.odd", missing="complete", standardize=FALSE)

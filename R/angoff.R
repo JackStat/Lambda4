@@ -1,10 +1,16 @@
 #' Compute Angoff Coefficient
 #'
+#' @description Angoff's coefficient is most appropriately used for estimating reliability in tests that can be split into two parts with unequal lengths.  The calculation corrects for the inequality of length in the splits.  Angoff's coefficient is also believed to handle congeneric test structures relatively well.
+#'
+#'
 #' @param x Can be either a data matrix or a covariance matrix
 #' @param split.method Specify method for splitting items?
 #' @param missing How to handle missing values.
 #' @param standardize When TRUE Results are standardized by using the correlation matrix instead of the covariance matrix for computation.
 #'
+#' @return angoff The estimate of reliability.
+#' @return Split The split half key used to calculate angoff's coefficient.
+#' 
 #' @author Tyler Hunt \email{tyler@@psychoanalytix.com}
 #' 
 #' @references
