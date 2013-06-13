@@ -8,8 +8,9 @@
 #' @param missing How to handle missing values.
 #' @param standardize When TRUE Results are standardized by using the correlation matrix instead of the covariance matrix for computation.
 #'
-#' @return angoff The estimate of reliability.
-#' @return Split The split half key used to calculate angoff's coefficient.
+#' @return 
+#' \item{angoff}{The estimate of reliability.}
+#' \item{Split}{The split half key used to calculate angoff's coefficient.}
 #' 
 #' @author Tyler Hunt \email{tyler@@psychoanalytix.com}
 #' 

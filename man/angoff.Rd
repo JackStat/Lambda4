@@ -18,10 +18,9 @@
   matrix for computation.}
 }
 \value{
-  angoff The estimate of reliability.
-
-  Split The split half key used to calculate angoff's
-  coefficient.
+  \item{angoff}{The estimate of reliability.}
+  \item{Split}{The split half key used to calculate
+  angoff's coefficient.}
 }
 \description{
   Angoff's coefficient is most appropriately used for
