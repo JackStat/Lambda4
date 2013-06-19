@@ -7,7 +7,16 @@
 #' @param show.lambda4s If TRUE then the estimates for each split are included in the output.
 #' @param show.splits If TRUE then a binary matrix is exported that describes the ways the items were split.
 #' @param standardize When TRUE results are standardized by using the correlation matrix instead of the covariance matrix for computation.
-#' @param method Can select either Hunt or Osburn.
+#' @param method Can select either "Hunt" or "Osburn".
+#' 
+#' @return
+#' \item{estimates}{The mean, median, max, and min of the split-half reliabilities.}
+#' \item{lambda4s}{A vector of maximized split-half reliabilities.}
+#' \item{method}{The method chosen.  Either "Hunt" or "Osburn".}
+#' \item{Analysis.Details}{Returns the number of variables and the number of split-half reliabilities.}
+#' \item{Splits}{The binary indicators of the splits for the min, max, and median split-half reliability.}
+#' \item{show.splits}{Logical argument selected to show the splits.}
+#' \item{show.lambdas4s}{Logical argument selected to show the split-half reliabilities.}
 #' 
 #' @author Tyler Hunt \email{tyler@@psychoanalytix.com}
 #' 
@@ -113,7 +122,7 @@ cov.lambda4<-function (x, method="Hunt", missing = "complete", show.lambda4s = F
       
       Analysis.Details <- data.frame(nvar, count)
       
-      result <- list(lambda4 = lambda4, 
+      result <- list(estimates = lambda4, 
                      lambda4s = l4.vect, 
                      method = method,
                      Analysis.Details = Analysis.Details, 

@@ -22,7 +22,20 @@
   using the correlation matrix instead of the covariance
   matrix for computation.}
 
-  \item{method}{Can select either Hunt or Osburn.}
+  \item{method}{Can select either "Hunt" or "Osburn".}
+}
+\value{
+  \item{estimates}{The mean, median, max, and min of the
+  split-half reliabilities.} \item{lambda4s}{A vector of
+  maximized split-half reliabilities.} \item{method}{The
+  method chosen.  Either "Hunt" or "Osburn".}
+  \item{Analysis.Details}{Returns the number of variables
+  and the number of split-half reliabilities.}
+  \item{Splits}{The binary indicators of the splits for the
+  min, max, and median split-half reliability.}
+  \item{show.splits}{Logical argument selected to show the
+  splits.} \item{show.lambdas4s}{Logical argument selected
+  to show the split-half reliabilities.}
 }
 \description{
   This code estimates maximized lambda4, a split-half
