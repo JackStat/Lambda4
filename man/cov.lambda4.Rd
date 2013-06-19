@@ -25,7 +25,16 @@
   \item{method}{Can select either Hunt or Osburn.}
 }
 \description{
-  Compute Covariance Maximized Lambda4
+  This code estimates maximized lambda4, a split-half
+  reliability estimate.  The function splits the halves by
+  specifying a two column list of paired inter-item
+  covariances in descending order. It then calculates
+  Guttman's lambda4 on every possible split-half while
+  preserving the inter-item pairings. The function then
+  returns a list of the Lambda4s and then takes the
+  minimum, maximum, median, and mean of the list.  This
+  calculation is most appropiately applied to tests with
+  multiple factors.
 }
 \examples{
 cov.lambda4(Rosenberg, method="Hunt")
