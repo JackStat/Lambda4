@@ -10,6 +10,8 @@
   \item{x}{Can be either a data matrix or a covariance
   matrix.}
 
+  \item{method}{Can specify either "Hunt" or "Osburn".}
+
   \item{missing}{How to handle missing values.}
 
   \item{show.lambda4s}{If TRUE then the estimates for each
@@ -21,8 +23,6 @@
   \item{standardize}{When TRUE results are standardized by
   using the correlation matrix instead of the covariance
   matrix for computation.}
-
-  \item{method}{Can select either "Hunt" or "Osburn".}
 }
 \value{
   \item{estimates}{The mean, median, max, and min of the
