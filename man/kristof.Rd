@@ -18,7 +18,8 @@
   matrix for computation.}
 }
 \description{
-  Compute Kristof Coefficient
+  A reliability coefficient used for tests that are easily
+  split into three parts.
 }
 \examples{
 kristof(Rosenberg, split.method="triplet")

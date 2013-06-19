@@ -1,5 +1,7 @@
 #' Compute Covariance Matrix
-#'
+#' 
+#' @description Implements various missing data techniques and generates a covariance matrix.
+#' 
 #' @param x A data matrix
 #' @param missing how to handle missing values.
 #' 
