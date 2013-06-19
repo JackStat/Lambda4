@@ -1,5 +1,7 @@
 #' Guttman's 6 Lambda Coefficients
 #' 
+#' @description Calculates all 6 of Guttman's lambda coefficients.  Note: the estimate for Lambda4 is maximized.
+#' 
 #' @param x Can be either a data matrix or a covariance matrix
 #' @param missing How to handle missing values.
 #' @param standardize When TRUE Results are standardized by using the correlation matrix instead of the covariance matrix for computation.
