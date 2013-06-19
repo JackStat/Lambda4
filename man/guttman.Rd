@@ -15,8 +15,10 @@
   matrix for computation.}
 }
 \description{
-  Calculates all 6 of Guttman's lambda coefficients.  Note:
-  the estimate for Lambda4 is maximized.
+  Calculates all 6 of Guttman's lambda coefficients.
+}
+\note{
+  The estimate for Lambda4 is maximized.
 }
 \examples{
 guttman(Rosenberg)
