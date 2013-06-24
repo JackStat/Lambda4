@@ -2,6 +2,11 @@
 #'
 #' @description A reliability coefficient used for tests that are easily split into three parts.
 #'
+#' @return
+#' \item{kristof}{The Kristof estimate of reliability.}
+#' \item{Split}{The split used to obtain the reliability estimate.}
+#'
+#'
 #' @param x Can be either a data matrix or a covariance matrix
 #' @param split.method Specify method for splitting items?
 #' @param missing How to handle missing values.

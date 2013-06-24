@@ -17,6 +17,11 @@
   using the correlation matrix instead of the covariance
   matrix for computation.}
 }
+\value{
+  \item{kristof}{The Kristof estimate of reliability.}
+  \item{Split}{The split used to obtain the reliability
+  estimate.}
+}
 \description{
   A reliability coefficient used for tests that are easily
   split into three parts.
