@@ -13,6 +13,17 @@
 
   \item{missing}{how to handle missing values.}
 }
+\value{
+  \item{lambda3}{The unstandardized and standardized
+  lambda3 estimate.} \item{item.stats}{If the input data
+  was a covariance matrix then this is a table of
+  reliability estimates if an item was dropped.  If the
+  input data is a data frame then the mean, standard
+  deviation, and number of observations are also included.}
+  \item{items}{The number of items.}
+  \item{item.stats.max}{The maximum number of item to
+  display the item.stats table (user specified).}
+}
 \description{
   Often recognized as Cronbach's alpha, Guttman's Lambda 3
   can be used to estimate reliability when the data can be

@@ -2,6 +2,12 @@
 #'
 #' @description Often recognized as Cronbach's alpha, Guttman's Lambda 3 can be used to estimate reliability when the data can be split in parallel forms.
 #' 
+#' @return
+#' \item{lambda3}{The unstandardized and standardized lambda3 estimate.}
+#' \item{item.stats}{If the input data was a covariance matrix then this is a table of reliability estimates if an item was dropped.  If the input data is a data frame then the mean, standard deviation, and number of observations are also included.}
+#' \item{items}{The number of items.}
+#' \item{item.stats.max}{The maximum number of item to display the item.stats table (user specified).}
+#' 
 #' @param x Can be either a data matrix or a covariance matrix
 #' @param item.stats.max items statistics shown if the number of items are less than this value.
 #' @param missing how to handle missing values.
@@ -35,7 +41,7 @@ lambda3<-function(x, item.stats.max=12, missing="complete"){
  
   Unstandardized<-(p/(p-1))*(1-(onerow%*%diag(sigma)/(onerow%*%sigma%*%onevector)))
   Standardized<-(p/(p-1))*(1-(onerow%*%diag(sigma.cor)/(onerow%*%sigma.cor%*%onevector)))
-  Items<-p
+  items<-p
   lambda3<-data.frame(Unstandardized, Standardized)
  
   If.Dropped<-rep(NA,p)
@@ -48,13 +54,14 @@ lambda3<-function(x, item.stats.max=12, missing="complete"){
   }
   
   if(n != p) {
-    Item.Statistics<-data.frame(Mean,SD,Obs,If.Dropped, row.names=(colnames(x)))
+    item.stats<-data.frame(Mean,SD,Obs,If.Dropped, row.names=(colnames(x)))
   }
   else{
-    Item.Statistics=data.frame(If.Dropped, row.names=(colnames(x)))
+    item.stats=data.frame(If.Dropped, row.names=(colnames(x)))
   }
+  rownames(item.stats)=colnames(x)
     
-  result<-list(lambda3=lambda3, Item.Statistics=Item.Statistics, Items=Items, item.stats.max=item.stats.max) 
+  result<-list(lambda3=lambda3, item.stats=item.stats, items=items, item.stats.max=item.stats.max) 
 
  
   class(result) <- c("lambda3")

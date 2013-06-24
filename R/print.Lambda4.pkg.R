@@ -37,9 +37,9 @@ print.lambda3<-function(x, ...){
   cat(round(x$lambda3[[2]], getOption('lambda.digits', 3)))
   cat("\n\n")
   
-  if(x$Items <= x$item.stats.max){
+  if(x$items <= x$item.stats.max){
     cat("Item Statistics \n")
-    print(round(x$Item.Statistics, getOption('lambda.digits', 3)))
+    print(round(x$item.stats, getOption('lambda.digits', 3)))
   }
   
 }
