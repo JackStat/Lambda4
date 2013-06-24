@@ -14,6 +14,17 @@
   using the correlation matrix instead of the covariance
   matrix for computation.}
 }
+\value{
+  \item{Lambda1}{Guttman's Lambda1 estimate of
+  reliability.} \item{Lambda2}{Guttman's Lambda2 estimate
+  of reliability.} \item{Lambda3}{Guttman's Lambda3
+  estimate of reliability. Also known as Cronbach's alpha
+  or coefficient alpha.} \item{Lambda4}{Guttman's maximimal
+  Lambda4 estimate of reliability.}
+  \item{Lambda5}{Guttman's Lambda5 estimate of
+  reliability.} \item{Lambda6}{Guttman's Lambda6 estimate
+  of reliability.}
+}
 \description{
   Calculates all 6 of Guttman's lambda coefficients.
 }
