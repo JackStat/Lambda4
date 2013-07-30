@@ -2,7 +2,7 @@ Package: Lambda4
 Type: Package
 Title: Collection of Internal Consistency Reliability Coefficients.
 Version: 3.0
-Date: 2012-04-15
+Date: 2013-07-30
 Author: Tyler Hunt <tyler@psychoanalytix.com>
 Maintainer: Tyler Hunt <tyler@psychoanalytix.com>
 Description: Currently the package includes 14 methods for calculating internal
