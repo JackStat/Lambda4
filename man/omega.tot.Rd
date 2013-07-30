@@ -16,7 +16,8 @@
   \item{omega.tot}{Omega total reliability estimate.}
 }
 \description{
-  Compute McDonald's Omega Total
+  McDonald proposed Omega Total as a method for estimating
+  reliabilty for a test with multiple factors.
 }
 \examples{
 omega.tot(Rosenberg, factors=1)

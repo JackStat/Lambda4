@@ -1,4 +1,6 @@
 #' Compute McDonald's Omega Total
+#' 
+#' @description  McDonald proposed Omega Total as a method for estimating reliabilty for a test with multiple factors.
 #'
 #' @param x Can be either a data matrix or a covariance matrix
 #' @param missing how to handle missing values. \eqn{mi}.
